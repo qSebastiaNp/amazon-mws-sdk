@@ -6,16 +6,18 @@ Installation
 
 The preferred way to install this extension is through [composer](http://getcomposer.org/download/).
 
-Either run
+Add
 
 ```
-php composer.phar require --prefer-dist qSebastiaNp/amazon-mws-sdk "*"
-```
-
-or add
-
-```
-"qSebastiaNp/amazon-mws-sdk": "*"
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/qSebastiaNp/amazon-mws-sdk.git"
+        }
+    ],
+    "require": {
+        "valkan07/amazon-mws-sdk": "*"
+    }
 ```
 
 to the require section of your `composer.json` file.

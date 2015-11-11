@@ -1,5 +1,5 @@
 {
-    "name": "qSebastiaNp/amazon-mws-sdk",
+    "name": "valkan07/amazon-mws-sdk",
     "description": "AmazonMws",
     "type": "library",
     "license": "Apache-2.0",
@@ -7,10 +7,6 @@
         {
             "name": "Valentin",
             "email": "kvalik@gmail.com"
-        },
-        {
-            "name": "Sebastian",
-            "email": "what-is-it@tor.allowed.org"
         }
     ],
     "require": {
