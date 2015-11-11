@@ -16,11 +16,11 @@ Add
         }
     ],
     "require": {
-        "valkan07/amazon-mws-sdk": "*"
+        "valkan07/amazon-mws-sdk": "dev-master"
     }
 ```
 
-to the require section of your `composer.json` file.
+to your `composer.json` file.
 
 
 Usage
@@ -29,4 +29,5 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \\amazonmws\AutoloadExample::widget(); ?>```
+<?= \\amazonmws\AutoloadExample::widget(); ?>
+```
