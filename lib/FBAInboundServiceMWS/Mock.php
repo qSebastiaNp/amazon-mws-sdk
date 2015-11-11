@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,14 +13,14 @@
  * @category Amazon
  * @package  FBA Inbound Service MWS
  * @version  2010-10-01
- * Library Version: 2014-09-30
- * Generated: Fri Nov 21 18:21:09 GMT 2014
+ * Library Version: 2015-10-22
+ * Generated: Thu Oct 22 01:02:38 GMT 2015
  */
 
 /**
  *  @see FBAInboundServiceMWS_Interface
  */
-require_once(dirname(__FILE__) . '/Interface.php');
+require_once (dirname(__FILE__) . '/Interface.php'); 
 
 class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
 {
@@ -40,7 +40,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function confirmTransportRequest($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ConfirmTransportRequestResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ConfirmTransportRequestResponse.php');
         return FBAInboundServiceMWS_Model_ConfirmTransportRequestResponse::fromXML($this->_invoke('ConfirmTransportRequest'));
     }
 
@@ -60,7 +60,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function createInboundShipment($request)
     {
-        require_once(dirname(__FILE__) . '/Model/CreateInboundShipmentResponse.php');
+        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentResponse.php');
         return FBAInboundServiceMWS_Model_CreateInboundShipmentResponse::fromXML($this->_invoke('CreateInboundShipment'));
     }
 
@@ -80,7 +80,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function createInboundShipmentPlan($request)
     {
-        require_once(dirname(__FILE__) . '/Model/CreateInboundShipmentPlanResponse.php');
+        require_once (dirname(__FILE__) . '/Model/CreateInboundShipmentPlanResponse.php');
         return FBAInboundServiceMWS_Model_CreateInboundShipmentPlanResponse::fromXML($this->_invoke('CreateInboundShipmentPlan'));
     }
 
@@ -98,7 +98,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function estimateTransportRequest($request)
     {
-        require_once(dirname(__FILE__) . '/Model/EstimateTransportRequestResponse.php');
+        require_once (dirname(__FILE__) . '/Model/EstimateTransportRequestResponse.php');
         return FBAInboundServiceMWS_Model_EstimateTransportRequestResponse::fromXML($this->_invoke('EstimateTransportRequest'));
     }
 
@@ -116,7 +116,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getBillOfLading($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetBillOfLadingResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetBillOfLadingResponse.php');
         return FBAInboundServiceMWS_Model_GetBillOfLadingResponse::fromXML($this->_invoke('GetBillOfLading'));
     }
 
@@ -135,7 +135,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      *       * US non-partnered UPS: PackageLabel_Letter_6
      *       * US partnered-UPS: PackageLabel_Letter_2
      *       * GB, DE, FR, IT, ES: PackageLabel_A4_4, PackageLabel_Plain_Paper
-     *       * Partnered EU: ? <!-- TODO: define this -->
+     *       * Partnered EU: PackageLabel_A4_2
      *       * JP/CN: PackageLabel_Plain_Paper
      *
      * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetPackageLabels request or FBAInboundServiceMWS_Model_GetPackageLabels object itself
@@ -146,8 +146,29 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getPackageLabels($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetPackageLabelsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetPackageLabelsResponse.php');
         return FBAInboundServiceMWS_Model_GetPackageLabelsResponse::fromXML($this->_invoke('GetPackageLabels'));
+    }
+
+    /**
+     * Get Pallet Labels
+     * Retrieves the PDF-formatted pallet label data for the pallets in an LTL shipment. These labels
+     *     include relevant data for shipments being sent to Amazon Fulfillment Centers. The PDF data will be 
+     *     ZIP'd and then it will be encoded as a Base64 string, and MD5 hash is included with the response to 
+     *     validate the label data which will be encoded as Base64. The language of the address and FC prep 
+     *     instructions sections of the labels are determined by the marketplace in which the request is being 
+     *     made and the marketplace of the destination FC, respectively.
+     *
+     * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetPalletLabels request or FBAInboundServiceMWS_Model_GetPalletLabels object itself
+     * @see FBAInboundServiceMWS_Model_GetPalletLabels
+     * @return FBAInboundServiceMWS_Model_GetPalletLabelsResponse
+     *
+     * @throws FBAInboundServiceMWS_Exception
+     */
+    public function getPalletLabels($request)
+    {
+        require_once (dirname(__FILE__) . '/Model/GetPalletLabelsResponse.php');
+        return FBAInboundServiceMWS_Model_GetPalletLabelsResponse::fromXML($this->_invoke('GetPalletLabels'));
     }
 
     /**
@@ -166,7 +187,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getPrepInstructionsForASIN($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetPrepInstructionsForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForASINResponse.php');
         return FBAInboundServiceMWS_Model_GetPrepInstructionsForASINResponse::fromXML($this->_invoke('GetPrepInstructionsForASIN'));
     }
 
@@ -186,7 +207,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getPrepInstructionsForSKU($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetPrepInstructionsForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetPrepInstructionsForSKUResponse.php');
         return FBAInboundServiceMWS_Model_GetPrepInstructionsForSKUResponse::fromXML($this->_invoke('GetPrepInstructionsForSKU'));
     }
 
@@ -205,7 +226,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getServiceStatus($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return FBAInboundServiceMWS_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -223,8 +244,40 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function getTransportContent($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetTransportContentResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetTransportContentResponse.php');
         return FBAInboundServiceMWS_Model_GetTransportContentResponse::fromXML($this->_invoke('GetTransportContent'));
+    }
+
+    /**
+     * Get Unique Package Labels
+     * Retrieves the PDF-formatted package label data for the packages of the
+     *     shipment. These labels will include relevant data for shipments utilizing 
+     *     Amazon-partnered carriers. Each label contains a unique package identifier that represents the mapping between
+     *     physical and virtual packages. This API requires that Carton Information has been provided for all packages in the
+     *     shipment. The PDF data will be ZIP'd and then it will be encoded as a Base64 string, and
+     *     MD5 hash is included with the response to validate the label data which will be encoded as Base64.
+     *     The language of the address and FC prep instructions sections of the labels are
+     *     determined by the marketplace in which the request is being made and the marketplace of
+     *     the destination FC, respectively.
+     *     
+     *     Only select PageTypes are supported in each marketplace. By marketplace, the
+     *     supported types are:
+     *       * US non-partnered UPS: PackageLabel_Letter_6
+     *       * US partnered-UPS: PackageLabel_Letter_2
+     *       * GB, DE, FR, IT, ES: PackageLabel_A4_4, PackageLabel_Plain_Paper
+     *       * Partnered EU: PackageLabel_A4_2
+     *       * JP/CN: PackageLabel_Plain_Paper
+     *
+     * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetUniquePackageLabels request or FBAInboundServiceMWS_Model_GetUniquePackageLabels object itself
+     * @see FBAInboundServiceMWS_Model_GetUniquePackageLabels
+     * @return FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse
+     *
+     * @throws FBAInboundServiceMWS_Exception
+     */
+    public function getUniquePackageLabels($request)
+    {
+        require_once (dirname(__FILE__) . '/Model/GetUniquePackageLabelsResponse.php');
+        return FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse::fromXML($this->_invoke('GetUniquePackageLabels'));
     }
 
     /**
@@ -249,7 +302,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function listInboundShipmentItems($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInboundShipmentItemsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsResponse.php');
         return FBAInboundServiceMWS_Model_ListInboundShipmentItemsResponse::fromXML($this->_invoke('ListInboundShipmentItems'));
     }
 
@@ -268,7 +321,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function listInboundShipmentItemsByNextToken($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentItemsByNextTokenResponse.php');
         return FBAInboundServiceMWS_Model_ListInboundShipmentItemsByNextTokenResponse::fromXML($this->_invoke('ListInboundShipmentItemsByNextToken'));
     }
 
@@ -292,7 +345,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function listInboundShipments($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInboundShipmentsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsResponse.php');
         return FBAInboundServiceMWS_Model_ListInboundShipmentsResponse::fromXML($this->_invoke('ListInboundShipments'));
     }
 
@@ -310,7 +363,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function listInboundShipmentsByNextToken($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInboundShipmentsByNextTokenResponse.php');
         return FBAInboundServiceMWS_Model_ListInboundShipmentsByNextTokenResponse::fromXML($this->_invoke('ListInboundShipmentsByNextToken'));
     }
 
@@ -327,7 +380,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function putTransportContent($request)
     {
-        require_once(dirname(__FILE__) . '/Model/PutTransportContentResponse.php');
+        require_once (dirname(__FILE__) . '/Model/PutTransportContentResponse.php');
         return FBAInboundServiceMWS_Model_PutTransportContentResponse::fromXML($this->_invoke('PutTransportContent'));
     }
 
@@ -354,7 +407,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function updateInboundShipment($request)
     {
-        require_once(dirname(__FILE__) . '/Model/UpdateInboundShipmentResponse.php');
+        require_once (dirname(__FILE__) . '/Model/UpdateInboundShipmentResponse.php');
         return FBAInboundServiceMWS_Model_UpdateInboundShipmentResponse::fromXML($this->_invoke('UpdateInboundShipment'));
     }
 
@@ -375,7 +428,7 @@ class FBAInboundServiceMWS_Mock implements FBAInboundServiceMWS_Interface
      */
     public function voidTransportRequest($request)
     {
-        require_once(dirname(__FILE__) . '/Model/VoidTransportRequestResponse.php');
+        require_once (dirname(__FILE__) . '/Model/VoidTransportRequestResponse.php');
         return FBAInboundServiceMWS_Model_VoidTransportRequestResponse::fromXML($this->_invoke('VoidTransportRequest'));
     }
 

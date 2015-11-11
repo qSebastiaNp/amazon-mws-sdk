@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,14 +13,14 @@
  * @category Amazon
  * @package  FBA Inventory Service MWS
  * @version  2010-10-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 17:54:00 GMT 2014
+ * Library Version: 2015-09-29
+ * Generated: Wed Sep 30 14:43:28 PDT 2015
  */
 
 /**
  *  @see FBAInventoryServiceMWS_Interface
  */
-require_once(dirname(__FILE__) . '/Interface.php');
+require_once (dirname(__FILE__) . '/Interface.php'); 
 
 class FBAInventoryServiceMWS_Mock implements FBAInventoryServiceMWS_Interface
 {
@@ -41,7 +41,7 @@ class FBAInventoryServiceMWS_Mock implements FBAInventoryServiceMWS_Interface
      */
     public function getServiceStatus($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return FBAInventoryServiceMWS_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -86,7 +86,7 @@ class FBAInventoryServiceMWS_Mock implements FBAInventoryServiceMWS_Interface
      */
     public function listInventorySupply($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInventorySupplyResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyResponse.php');
         return FBAInventoryServiceMWS_Model_ListInventorySupplyResponse::fromXML($this->_invoke('ListInventorySupply'));
     }
 
@@ -106,7 +106,7 @@ class FBAInventoryServiceMWS_Mock implements FBAInventoryServiceMWS_Interface
      */
     public function listInventorySupplyByNextToken($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListInventorySupplyByNextTokenResponse.php');
         return FBAInventoryServiceMWS_Model_ListInventorySupplyByNextTokenResponse::fromXML($this->_invoke('ListInventorySupplyByNextToken'));
     }
 

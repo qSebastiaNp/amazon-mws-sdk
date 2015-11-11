@@ -1,27 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2009 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- *  Generated: Wed Jan 11 01:38:50 GMT 2012
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2015-09-01
+ * Generated: Thu Sep 10 06:52:22 PDT 2015
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_OfferCountType
@@ -29,121 +30,161 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
+ * <li>condition: string</li>
+ * <li>fulfillmentChannel: string</li>
+ * <li>OfferCount: int</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_OfferCountType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_OfferCountType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_OfferCountType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-       'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-       'condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
+    'fulfillmentChannel' => array('FieldValue' => null, 'FieldType' => '@string'),
+    'OfferCount' => array('FieldValue' => null, 'FieldType' => 'int'),
+    );
+    parent::__construct($data);
     }
 
-    
-      /**
-       * Gets the value of the condition attribute.
-       * 
-       * @return string condition
-       */
-      public function getcondition() 
-      {
-          return $this->_fields['condition']['FieldValue'];
-      }
+    /**
+     * Get the value of the condition property.
+     *
+     * @return String condition.
+     */
+    public function getcondition()
+    {
+        return $this->_fields['condition']['FieldValue'];
+    }
 
-      /**
-       * Sets the value of the condition property.
-       * 
-       * @param string condition
-       * @return this instance
-       */
-      public function setcondition($value) 
-      {
-          $this->_fields['condition']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of the condition property.
+     *
+     * @param string condition
+     * @return this instance
+     */
+    public function setcondition($value)
+    {
+        $this->_fields['condition']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Sets the value of the condition and returns this instance
-       * 
-       * @param string $value condition
-       * @return MarketplaceWebServiceProducts_Model_OfferCountType instance
-       */
-      public function withcondition($value)
-      {
-          $this->setcondition($value);
-          return $this;
-      }
+    /**
+     * Check to see if condition is set.
+     *
+     * @return true if condition is set.
+     */
+    public function isSetcondition()
+    {
+                return !is_null($this->_fields['condition']['FieldValue']);
+            }
 
+    /**
+     * Set the value of condition, return this.
+     *
+     * @param condition
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withcondition($value)
+    {
+        $this->setcondition($value);
+        return $this;
+    }
 
-      /**
-       * Checks if condition is set
-       * 
-       * @return bool true if condition  is set
-       */
-      public function isSetcondition()
-      {
-          return !is_null($this->_fields['condition']['FieldValue']);
-      }
-      /**
-       * Gets the value of the Value attribute.
-       * 
-       * @return string Value
-       */
-      public function getValue() 
-      {
-          return $this->_fields['Value']['FieldValue'];
-      }
+    /**
+     * Get the value of the fulfillmentChannel property.
+     *
+     * @return String fulfillmentChannel.
+     */
+    public function getfulfillmentChannel()
+    {
+        return $this->_fields['fulfillmentChannel']['FieldValue'];
+    }
 
-      /**
-       * Sets the value of the Value property.
-       * 
-       * @param string Value
-       * @return this instance
-       */
-      public function setValue($value) 
-      {
-          $this->_fields['Value']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of the fulfillmentChannel property.
+     *
+     * @param string fulfillmentChannel
+     * @return this instance
+     */
+    public function setfulfillmentChannel($value)
+    {
+        $this->_fields['fulfillmentChannel']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Sets the value of the Value and returns this instance
-       * 
-       * @param string $value Value
-       * @return MarketplaceWebServiceProducts_Model_OfferCountType instance
-       */
-      public function withValue($value)
-      {
-          $this->setValue($value);
-          return $this;
-      }
+    /**
+     * Check to see if fulfillmentChannel is set.
+     *
+     * @return true if fulfillmentChannel is set.
+     */
+    public function isSetfulfillmentChannel()
+    {
+                return !is_null($this->_fields['fulfillmentChannel']['FieldValue']);
+            }
 
+    /**
+     * Set the value of fulfillmentChannel, return this.
+     *
+     * @param fulfillmentChannel
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withfulfillmentChannel($value)
+    {
+        $this->setfulfillmentChannel($value);
+        return $this;
+    }
 
-      /**
-       * Checks if Value is set
-       * 
-       * @return bool true if Value  is set
-       */
-      public function isSetValue()
-      {
-          return !is_null($this->_fields['Value']['FieldValue']);
-      }
+    /**
+     * Get the value of the OfferCount property.
+     *
+     * @return Integer OfferCount.
+     */
+    public function getOfferCount()
+    {
+        return $this->_fields['OfferCount']['FieldValue'];
+    }
 
+    /**
+     * Set the value of the OfferCount property.
+     *
+     * @param int offerCount
+     * @return this instance
+     */
+    public function setOfferCount($value)
+    {
+        $this->_fields['OfferCount']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if OfferCount is set.
+     *
+     * @return true if OfferCount is set.
+     */
+    public function isSetOfferCount()
+    {
+                return !is_null($this->_fields['OfferCount']['FieldValue']);
+            }
+
+    /**
+     * Set the value of OfferCount, return this.
+     *
+     * @param offerCount
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withOfferCount($value)
+    {
+        $this->setOfferCount($value);
+        return $this;
+    }
 
 }

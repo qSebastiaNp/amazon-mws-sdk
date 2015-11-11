@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,14 +13,14 @@
  * @category Amazon
  * @package  Marketplace Web Service Products
  * @version  2011-10-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 17:59:56 GMT 2014
+ * Library Version: 2015-09-01
+ * Generated: Thu Sep 10 06:52:22 PDT 2015
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Interface
  */
-require_once(dirname(__FILE__) . '/Interface.php');
+require_once (dirname(__FILE__) . '/Interface.php'); 
 
 class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProducts_Interface
 {
@@ -39,7 +39,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getCompetitivePricingForASIN($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
         return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($this->_invoke('GetCompetitivePricingForASIN'));
     }
 
@@ -56,7 +56,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getCompetitivePricingForSKU($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
         return MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($this->_invoke('GetCompetitivePricingForSKU'));
     }
 
@@ -73,7 +73,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getLowestOfferListingsForASIN($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
         return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($this->_invoke('GetLowestOfferListingsForASIN'));
     }
 
@@ -90,8 +90,42 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getLowestOfferListingsForSKU($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
         return MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($this->_invoke('GetLowestOfferListingsForSKU'));
+    }
+
+    /**
+     * Get Lowest Priced Offers For ASIN
+     * Retrieves the lowest priced offers based on the product identified by the given
+     *     ASIN.
+     *
+     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
+     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN
+     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     *
+     * @throws MarketplaceWebServiceProducts_Exception
+     */
+    public function getLowestPricedOffersForASIN($request)
+    {
+        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
+        return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse::fromXML($this->_invoke('GetLowestPricedOffersForASIN'));
+    }
+
+    /**
+     * Get Lowest Priced Offers For SKU
+     * Retrieves the lowest priced offers based on the product identified by the given
+     *     SellerId and SKU.
+     *
+     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
+     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU
+     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     *
+     * @throws MarketplaceWebServiceProducts_Exception
+     */
+    public function getLowestPricedOffersForSKU($request)
+    {
+        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
+        return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse::fromXML($this->_invoke('GetLowestPricedOffersForSKU'));
     }
 
     /**
@@ -107,7 +141,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getMatchingProduct($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
         return MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($this->_invoke('GetMatchingProduct'));
     }
 
@@ -124,7 +158,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getMatchingProductForId($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
         return MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($this->_invoke('GetMatchingProductForId'));
     }
 
@@ -140,7 +174,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getMyPriceForASIN($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
         return MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($this->_invoke('GetMyPriceForASIN'));
     }
 
@@ -156,7 +190,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getMyPriceForSKU($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
         return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($this->_invoke('GetMyPriceForSKU'));
     }
 
@@ -173,7 +207,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getProductCategoriesForASIN($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
         return MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($this->_invoke('GetProductCategoriesForASIN'));
     }
 
@@ -190,7 +224,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getProductCategoriesForSKU($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
         return MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($this->_invoke('GetProductCategoriesForSKU'));
     }
 
@@ -208,7 +242,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function getServiceStatus($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -225,7 +259,7 @@ class MarketplaceWebServiceProducts_Mock implements MarketplaceWebServiceProduct
      */
     public function listMatchingProducts($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
         return MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($this->_invoke('ListMatchingProducts'));
     }
 

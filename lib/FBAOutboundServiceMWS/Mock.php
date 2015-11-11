@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,14 +13,14 @@
  * @category Amazon
  * @package  FBA Outbound Service MWS
  * @version  2010-10-01
- * Library Version: 2014-10-20
- * Generated: Thu Oct 30 16:36:58 GMT 2014
+ * Library Version: 2015-06-18
+ * Generated: Fri Jun 19 13:22:06 GMT 2015
  */
 
 /**
  *  @see FBAOutboundServiceMWS_Interface
  */
-require_once(dirname(__FILE__) . '/Interface.php');
+require_once (dirname(__FILE__) . '/Interface.php'); 
 
 class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
 {
@@ -41,7 +41,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function cancelFulfillmentOrder($request)
     {
-        require_once(dirname(__FILE__) . '/Model/CancelFulfillmentOrderResponse.php');
+        require_once (dirname(__FILE__) . '/Model/CancelFulfillmentOrderResponse.php');
         return FBAOutboundServiceMWS_Model_CancelFulfillmentOrderResponse::fromXML($this->_invoke('CancelFulfillmentOrder'));
     }
 
@@ -106,7 +106,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function createFulfillmentOrder($request)
     {
-        require_once(dirname(__FILE__) . '/Model/CreateFulfillmentOrderResponse.php');
+        require_once (dirname(__FILE__) . '/Model/CreateFulfillmentOrderResponse.php');
         return FBAOutboundServiceMWS_Model_CreateFulfillmentOrderResponse::fromXML($this->_invoke('CreateFulfillmentOrder'));
     }
 
@@ -125,7 +125,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function getFulfillmentOrder($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetFulfillmentOrderResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetFulfillmentOrderResponse.php');
         return FBAOutboundServiceMWS_Model_GetFulfillmentOrderResponse::fromXML($this->_invoke('GetFulfillmentOrder'));
     }
 
@@ -150,7 +150,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function getFulfillmentPreview($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetFulfillmentPreviewResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetFulfillmentPreviewResponse.php');
         return FBAOutboundServiceMWS_Model_GetFulfillmentPreviewResponse::fromXML($this->_invoke('GetFulfillmentPreview'));
     }
 
@@ -166,7 +166,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function getPackageTrackingDetails($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetPackageTrackingDetailsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetPackageTrackingDetailsResponse.php');
         return FBAOutboundServiceMWS_Model_GetPackageTrackingDetailsResponse::fromXML($this->_invoke('GetPackageTrackingDetails'));
     }
 
@@ -185,7 +185,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function getServiceStatus($request)
     {
-        require_once(dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         return FBAOutboundServiceMWS_Model_GetServiceStatusResponse::fromXML($this->_invoke('GetServiceStatus'));
     }
 
@@ -211,7 +211,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function listAllFulfillmentOrders($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersResponse.php');
         return FBAOutboundServiceMWS_Model_ListAllFulfillmentOrdersResponse::fromXML($this->_invoke('ListAllFulfillmentOrders'));
     }
 
@@ -231,7 +231,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function listAllFulfillmentOrdersByNextToken($request)
     {
-        require_once(dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListAllFulfillmentOrdersByNextTokenResponse.php');
         return FBAOutboundServiceMWS_Model_ListAllFulfillmentOrdersByNextTokenResponse::fromXML($this->_invoke('ListAllFulfillmentOrdersByNextToken'));
     }
 
@@ -290,7 +290,7 @@ class FBAOutboundServiceMWS_Mock implements FBAOutboundServiceMWS_Interface
      */
     public function updateFulfillmentOrder($request)
     {
-        require_once(dirname(__FILE__) . '/Model/UpdateFulfillmentOrderResponse.php');
+        require_once (dirname(__FILE__) . '/Model/UpdateFulfillmentOrderResponse.php');
         return FBAOutboundServiceMWS_Model_UpdateFulfillmentOrderResponse::fromXML($this->_invoke('UpdateFulfillmentOrder'));
     }
 

@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,14 +13,14 @@
  * @category Amazon
  * @package  Marketplace Web Service Products
  * @version  2011-10-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 17:59:56 GMT 2014
+ * Library Version: 2015-09-01
+ * Generated: Thu Sep 10 06:52:22 PDT 2015
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Interface
  */
-require_once(dirname(__FILE__) . '/Interface.php');
+require_once (dirname(__FILE__) . '/Interface.php');
 
 /**
  * MarketplaceWebServiceProducts_Client is an implementation of MarketplaceWebServiceProducts
@@ -30,7 +30,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
 {
 
     const SERVICE_VERSION = '2011-10-01';
-    const MWS_CLIENT_VERSION = '2014-10-20';
+    const MWS_CLIENT_VERSION = '2015-09-01';
 
     /** @var string */
     private  $_awsAccessKeyId = null;
@@ -66,14 +66,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getCompetitivePricingForASIN($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForASINRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForASINResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -121,14 +121,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getCompetitivePricingForSKU($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForSKURequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetCompetitivePricingForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetCompetitivePricingForSKUResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetCompetitivePricingForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -176,14 +176,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getLowestOfferListingsForASIN($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForASINResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -237,14 +237,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getLowestOfferListingsForSKU($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKURequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetLowestOfferListingsForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetLowestOfferListingsForSKUResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetLowestOfferListingsForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -285,6 +285,116 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
 
 
     /**
+     * Get Lowest Priced Offers For ASIN
+     * Retrieves the lowest priced offers based on the product identified by the given
+     *     ASIN.
+     *
+     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASIN object itself
+     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest
+     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse
+     *
+     * @throws MarketplaceWebServiceProducts_Exception
+     */
+    public function getLowestPricedOffersForASIN($request)
+    {
+        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest)) {
+            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINRequest.php');
+            $request = new MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINRequest($request);
+        }
+        $parameters = $request->toQueryParameterArray();
+        $parameters['Action'] = 'GetLowestPricedOffersForASIN';
+        $httpResponse = $this->_invoke($parameters);
+
+        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForASINResponse.php');
+        $response = MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForASINResponse::fromXML($httpResponse['ResponseBody']);
+        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
+        return $response;
+    }
+
+
+    /**
+     * Convert GetLowestPricedOffersForASINRequest to name value pairs
+     */
+    private function _convertGetLowestPricedOffersForASIN($request) {
+
+        $parameters = array();
+        $parameters['Action'] = 'GetLowestPricedOffersForASIN';
+        if ($request->isSetSellerId()) {
+            $parameters['SellerId'] =  $request->getSellerId();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
+        }
+        if ($request->isSetMarketplaceId()) {
+            $parameters['MarketplaceId'] =  $request->getMarketplaceId();
+        }
+        if ($request->isSetASIN()) {
+            $parameters['ASIN'] =  $request->getASIN();
+        }
+        if ($request->isSetItemCondition()) {
+            $parameters['ItemCondition'] =  $request->getItemCondition();
+        }
+
+        return $parameters;
+    }
+
+
+    /**
+     * Get Lowest Priced Offers For SKU
+     * Retrieves the lowest priced offers based on the product identified by the given
+     *     SellerId and SKU.
+     *
+     * @param mixed $request array of parameters for MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU request or MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKU object itself
+     * @see MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest
+     * @return MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse
+     *
+     * @throws MarketplaceWebServiceProducts_Exception
+     */
+    public function getLowestPricedOffersForSKU($request)
+    {
+        if (!($request instanceof MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest)) {
+            require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKURequest.php');
+            $request = new MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKURequest($request);
+        }
+        $parameters = $request->toQueryParameterArray();
+        $parameters['Action'] = 'GetLowestPricedOffersForSKU';
+        $httpResponse = $this->_invoke($parameters);
+
+        require_once (dirname(__FILE__) . '/Model/GetLowestPricedOffersForSKUResponse.php');
+        $response = MarketplaceWebServiceProducts_Model_GetLowestPricedOffersForSKUResponse::fromXML($httpResponse['ResponseBody']);
+        $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
+        return $response;
+    }
+
+
+    /**
+     * Convert GetLowestPricedOffersForSKURequest to name value pairs
+     */
+    private function _convertGetLowestPricedOffersForSKU($request) {
+
+        $parameters = array();
+        $parameters['Action'] = 'GetLowestPricedOffersForSKU';
+        if ($request->isSetSellerId()) {
+            $parameters['SellerId'] =  $request->getSellerId();
+        }
+        if ($request->isSetMWSAuthToken()) {
+            $parameters['MWSAuthToken'] =  $request->getMWSAuthToken();
+        }
+        if ($request->isSetMarketplaceId()) {
+            $parameters['MarketplaceId'] =  $request->getMarketplaceId();
+        }
+        if ($request->isSetSellerSKU()) {
+            $parameters['SellerSKU'] =  $request->getSellerSKU();
+        }
+        if ($request->isSetItemCondition()) {
+            $parameters['ItemCondition'] =  $request->getItemCondition();
+        }
+
+        return $parameters;
+    }
+
+
+    /**
      * Get Matching Product
      * GetMatchingProduct will return the details (attributes) for the
      * given ASIN.
@@ -298,14 +408,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getMatchingProduct($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetMatchingProductRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetMatchingProductRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProduct';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMatchingProductResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetMatchingProductResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -353,14 +463,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getMatchingProductForId($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetMatchingProductForIdRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMatchingProductForIdRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMatchingProductForId';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMatchingProductForIdResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetMatchingProductForIdResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -410,14 +520,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getMyPriceForASIN($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetMyPriceForASINRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMyPriceForASINResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetMyPriceForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -464,14 +574,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getMyPriceForSKU($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetMyPriceForSKURequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetMyPriceForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetMyPriceForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetMyPriceForSKUResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -519,14 +629,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getProductCategoriesForASIN($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForASINRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForASIN';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForASINResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -571,14 +681,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getProductCategoriesForSKU($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForSKURequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKURequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKURequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetProductCategoriesForSKU';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetProductCategoriesForSKUResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetProductCategoriesForSKUResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -624,14 +734,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function getServiceStatus($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_GetServiceStatusRequest)) {
-            require_once(dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
+            require_once (dirname(__FILE__) . '/Model/GetServiceStatusRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_GetServiceStatusRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'GetServiceStatus';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
+        require_once (dirname(__FILE__) . '/Model/GetServiceStatusResponse.php');
         $response = MarketplaceWebServiceProducts_Model_GetServiceStatusResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -670,14 +780,14 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     public function listMatchingProducts($request)
     {
         if (!($request instanceof MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest)) {
-            require_once(dirname(__FILE__) . '/Model/ListMatchingProductsRequest.php');
+            require_once (dirname(__FILE__) . '/Model/ListMatchingProductsRequest.php');
             $request = new MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest($request);
         }
         $parameters = $request->toQueryParameterArray();
         $parameters['Action'] = 'ListMatchingProducts';
         $httpResponse = $this->_invoke($parameters);
 
-        require_once(dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
+        require_once (dirname(__FILE__) . '/Model/ListMatchingProductsResponse.php');
         $response = MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse::fromXML($httpResponse['ResponseBody']);
         $response->setResponseHeaderMetadata($httpResponse['ResponseHeaderMetadata']);
         return $response;
@@ -872,7 +982,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
     {
         try {
             if (empty($this->_config['ServiceURL'])) {
-                require_once(dirname(__FILE__) . '/Exception.php');
+                require_once (dirname(__FILE__) . '/Exception.php');
                 throw new MarketplaceWebServiceProducts_Exception(
                     array ('ErrorCode' => 'InvalidServiceURL',
                            'Message' => "Missing serviceUrl configuration value. You may obtain a list of valid MWS URLs by consulting the MWS Developer's Guide, or reviewing the sample code published along side this library."));
@@ -895,7 +1005,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         } catch (MarketplaceWebServiceProducts_Exception $se) {
             throw $se;
         } catch (Exception $t) {
-            require_once(dirname(__FILE__) . '/Exception.php');
+            require_once (dirname(__FILE__) . '/Exception.php');
             throw new MarketplaceWebServiceProducts_Exception(array('Exception' => $t, 'Message' => $t->getMessage()));
         }
     }
@@ -922,7 +1032,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
             $exProps["Message"] = "Internal Error";
         }
 
-        require_once(dirname(__FILE__) . '/Exception.php');
+        require_once (dirname(__FILE__) . '/Exception.php');
         return new MarketplaceWebServiceProducts_Exception($exProps);
     }
 
@@ -987,7 +1097,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         $response = curl_exec($ch);
 
         if($response === false) {
-            require_once(dirname(__FILE__) . '/Exception.php');
+            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = curl_error($ch);
             $exProps["ErrorType"] = "HTTP";
             curl_close($ch);
@@ -1019,7 +1129,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
      */
     private function _extractHeadersAndBody($response){
         //First split by 2 'CRLF'
-        $responseComponents = preg_split("/(?:\r?\n){2}/", $response);
+        $responseComponents = preg_split("/(?:\r?\n){2}/", $response, 2);
         $body = null;
         for ($count = 0; 
                 $count < count($responseComponents) && $body == null; 
@@ -1039,7 +1149,7 @@ class MarketplaceWebServiceProducts_Client implements MarketplaceWebServiceProdu
         
         //If the body is null here then we were unable to parse the response and will throw an exception
         if($body == null){
-            require_once(dirname(__FILE__) . '/Exception.php');
+            require_once (dirname(__FILE__) . '/Exception.php');
             $exProps["Message"] = "Failed to parse valid HTTP response (" . $response . ")";
             $exProps["ErrorType"] = "HTTP";
             throw new MarketplaceWebServiceProducts_Exception($exProps);

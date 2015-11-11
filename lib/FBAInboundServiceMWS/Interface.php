@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2015 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  FBA Inbound Service MWS
  * @version  2010-10-01
- * Library Version: 2014-09-30
- * Generated: Fri Nov 21 18:21:09 GMT 2014
+ * Library Version: 2015-10-22
+ * Generated: Thu Oct 22 01:02:38 GMT 2015
  */
 
 interface  FBAInboundServiceMWS_Interface
@@ -114,7 +114,7 @@ interface  FBAInboundServiceMWS_Interface
      *       * US non-partnered UPS: PackageLabel_Letter_6
      *       * US partnered-UPS: PackageLabel_Letter_2
      *       * GB, DE, FR, IT, ES: PackageLabel_A4_4, PackageLabel_Plain_Paper
-     *       * Partnered EU: ? <!-- TODO: define this -->
+     *       * Partnered EU: PackageLabel_A4_2
      *       * JP/CN: PackageLabel_Plain_Paper
      *
      * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetPackageLabels request or FBAInboundServiceMWS_Model_GetPackageLabels object itself
@@ -124,6 +124,24 @@ interface  FBAInboundServiceMWS_Interface
      * @throws FBAInboundServiceMWS_Exception
      */
     public function getPackageLabels($request);
+
+
+    /**
+     * Get Pallet Labels
+     * Retrieves the PDF-formatted pallet label data for the pallets in an LTL shipment. These labels
+     *     include relevant data for shipments being sent to Amazon Fulfillment Centers. The PDF data will be 
+     *     ZIP'd and then it will be encoded as a Base64 string, and MD5 hash is included with the response to 
+     *     validate the label data which will be encoded as Base64. The language of the address and FC prep 
+     *     instructions sections of the labels are determined by the marketplace in which the request is being 
+     *     made and the marketplace of the destination FC, respectively.
+     *
+     * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetPalletLabels request or FBAInboundServiceMWS_Model_GetPalletLabels object itself
+     * @see FBAInboundServiceMWS_Model_GetPalletLabelsRequest
+     * @return FBAInboundServiceMWS_Model_GetPalletLabelsResponse
+     *
+     * @throws FBAInboundServiceMWS_Exception
+     */
+    public function getPalletLabels($request);
 
 
     /**
@@ -189,6 +207,35 @@ interface  FBAInboundServiceMWS_Interface
      * @throws FBAInboundServiceMWS_Exception
      */
     public function getTransportContent($request);
+
+
+    /**
+     * Get Unique Package Labels
+     * Retrieves the PDF-formatted package label data for the packages of the
+     *     shipment. These labels will include relevant data for shipments utilizing 
+     *     Amazon-partnered carriers. Each label contains a unique package identifier that represents the mapping between
+     *     physical and virtual packages. This API requires that Carton Information has been provided for all packages in the
+     *     shipment. The PDF data will be ZIP'd and then it will be encoded as a Base64 string, and
+     *     MD5 hash is included with the response to validate the label data which will be encoded as Base64.
+     *     The language of the address and FC prep instructions sections of the labels are
+     *     determined by the marketplace in which the request is being made and the marketplace of
+     *     the destination FC, respectively.
+     *     
+     *     Only select PageTypes are supported in each marketplace. By marketplace, the
+     *     supported types are:
+     *       * US non-partnered UPS: PackageLabel_Letter_6
+     *       * US partnered-UPS: PackageLabel_Letter_2
+     *       * GB, DE, FR, IT, ES: PackageLabel_A4_4, PackageLabel_Plain_Paper
+     *       * Partnered EU: PackageLabel_A4_2
+     *       * JP/CN: PackageLabel_Plain_Paper
+     *
+     * @param mixed $request array of parameters for FBAInboundServiceMWS_Model_GetUniquePackageLabels request or FBAInboundServiceMWS_Model_GetUniquePackageLabels object itself
+     * @see FBAInboundServiceMWS_Model_GetUniquePackageLabelsRequest
+     * @return FBAInboundServiceMWS_Model_GetUniquePackageLabelsResponse
+     *
+     * @throws FBAInboundServiceMWS_Exception
+     */
+    public function getUniquePackageLabels($request);
 
 
     /**

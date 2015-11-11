@@ -39,6 +39,13 @@
                         <CurrencyCode>String</CurrencyCode>
                         <Amount>100</Amount>
                         </Shipping>
+                        <Points>
+                        <PointsNumber>1</PointsNumber>
+                        <PointsMonetaryValue>
+                        <CurrencyCode>String</CurrencyCode>
+                        <Amount>100</Amount>
+                        </PointsMonetaryValue>
+                        </Points>
                         </Price>
                         </CompetitivePrice>
                     </CompetitivePrices>
@@ -86,6 +93,13 @@
                         <CurrencyCode>String</CurrencyCode>
                         <Amount>100</Amount>
                         </Shipping>
+                        <Points>
+                        <PointsNumber>1</PointsNumber>
+                        <PointsMonetaryValue>
+                        <CurrencyCode>String</CurrencyCode>
+                        <Amount>100</Amount>
+                        </PointsMonetaryValue>
+                        </Points>
                         </Price>
                         <MultipleOffersAtLowestPrice>String</MultipleOffersAtLowestPrice>
                     </LowestOfferListing>
@@ -105,6 +119,13 @@
                         <CurrencyCode>String</CurrencyCode>
                         <Amount>100</Amount>
                         </Shipping>
+                        <Points>
+                        <PointsNumber>1</PointsNumber>
+                        <PointsMonetaryValue>
+                        <CurrencyCode>String</CurrencyCode>
+                        <Amount>100</Amount>
+                        </PointsMonetaryValue>
+                        </Points>
                         </BuyingPrice>
                         <RegularPrice>
                         <CurrencyCode>String</CurrencyCode>
