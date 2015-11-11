@@ -1,6 +1,5 @@
-AmazonMws
-=========
-AmazonMws
+Amazon MWS SDK
+==============
 
 Installation
 ------------
@@ -10,13 +9,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist valkan07/amazon-mws-sdk "*"
+php composer.phar require --prefer-dist qSebastiaNp/amazon-mws-sdk "*"
 ```
 
 or add
 
 ```
-"valkan07/amazon-mws-sdk": "*"
+"qSebastiaNp/amazon-mws-sdk": "*"
 ```
 
 to the require section of your `composer.json` file.
